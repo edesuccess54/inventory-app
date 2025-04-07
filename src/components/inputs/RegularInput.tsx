@@ -1,6 +1,8 @@
 
 import { useState } from "react";
 import { EyeNoneIcon, EyeOpenIcon } from "@radix-ui/react-icons";
+import clsx from "clsx";
+import { mergeClassess } from "@/utils";
 
 const RegularInput: React.FC<RegularInputProps> = ({
   type,
@@ -8,13 +10,14 @@ const RegularInput: React.FC<RegularInputProps> = ({
   label,
   name,
   placeholder,
+  className,
   icon: Icon,
   onChange,
 }) => {
   const [passwordVissible, setPasswordVisible] = useState<boolean>(false);
 
   return (
-    <div className="mb-5">
+    <div className={clsx(mergeClassess('mb-5', className))}>
       {label && (
         <label htmlFor={id} className="block mb-1 text-[#48505E]">
           {label}

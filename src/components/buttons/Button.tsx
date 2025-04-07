@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+
 import { mergeClassess } from "@/utils";
 import { clsx } from "clsx";
 import { buttonStyles } from "./styles";
@@ -16,7 +17,6 @@ const Button = ({
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   children: React.ReactNode;
 }) => {
-
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (onClick) {

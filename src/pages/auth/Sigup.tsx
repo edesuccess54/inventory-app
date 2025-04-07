@@ -3,22 +3,22 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import IMAGES from "@/assets";
 import RegularInput from "@/components/inputs/RegularInput"
 import { Button } from "@/components/buttons";
 import { EnvelopeClosedIcon, LockClosedIcon, PersonIcon } from "@radix-ui/react-icons"
+import { GoogleIcon, logoImg } from "@/assets";
 
 const Sigup:React.FC = () => {
   return (
     <div className="w-full flex justify-between items-center">
         <div className="">
-          <Image src={IMAGES.IMAGES.logoImg} width={180} alt="logo" />
+          <Image src={logoImg} width={180} alt="logo" />
           <p className="mt-5 text-center text-[47px] font-bold text-[#009ED8]">KABAN</p>
         </div>
 
         <div className="p-3 w-[380px]">
           <div className="flex flex-col items-center justify-center">
-            <Image src={IMAGES.IMAGES.logoImg} width={50} alt="logo" />
+            <Image src={logoImg} width={50} alt="logo" />
             <h2 className="mt-6 mb-1 text-xl font-bold">Create an account</h2>
             <p>Start your 30-day free trial</p>
           </div>
@@ -31,24 +31,24 @@ const Sigup:React.FC = () => {
                 label="Name"
                 icon={PersonIcon}
                 placeholder="Enter your name"
-                />
-
-            <RegularInput
-              type="email"
-              name="email"
-              id="email"
-              label="Email"
-              icon={EnvelopeClosedIcon}
-              placeholder="Enter your email"
             />
 
             <RegularInput
-              type="password"
-              name="password"
-              id="password"
-              label="Password"
-              icon={LockClosedIcon}
-              placeholder="Create a password"
+                type="email"
+                name="email"
+                id="email"
+                label="Email"
+                icon={EnvelopeClosedIcon}
+                placeholder="Enter your email"
+            />
+
+            <RegularInput
+                type="password"
+                name="password"
+                id="password"
+                label="Password"
+                icon={LockClosedIcon}
+                placeholder="Create a password"
             />
 
             <Button type="submit">Get started</Button>
@@ -58,7 +58,7 @@ const Sigup:React.FC = () => {
                 variant="outline" 
                 className="flex items-center justify-center gap-3"
             >
-                <Image src={IMAGES.IMAGES.googleIcon} alt="" />
+                <Image src={GoogleIcon} alt="" />
                 <p>Sign up with Google</p>
             </Button>
 
