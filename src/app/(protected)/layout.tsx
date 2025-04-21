@@ -11,7 +11,7 @@ const ProtectedLayout = ({children}: {
         <SidePanel />
         <div className='flex-1'>
             <Header />
-            <div className='px-8 py-6 overflow-y-auto'>
+            <div className='px-3 py-3 overflow-y-auto h-[calc(100vh-80px)]'>
                 {children}
             </div>
         </div>

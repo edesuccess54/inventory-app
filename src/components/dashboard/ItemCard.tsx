@@ -9,13 +9,15 @@ const ItemCard = ({title, amount, icon, total, color, last}:{
     color: string,
     last?: boolean
 }) => {
-    console.log(color)
   return (
     <>
         <div className='flex-1'>
             <div className='flex justify-center items-center'>
-                <div className={`w-[30px] h-[30px] rounded-sm flex justify-center items-center bg-[${color}]`}>
-                    <ImageWrapper src={icon} alt=''  />
+                <div 
+                    className={`w-[30px] h-[30px] rounded-sm flex justify-center items-center`} 
+                    style={{backgroundColor: color}}
+                >
+                    <ImageWrapper src={icon} alt='' className='w-5 h-5' />
                 </div>
             </div>
 

@@ -12,5 +12,5 @@ export { default as SuppliersIcon } from './svgs/Suppliers.svg';
 export { default as RevenueIcons } from './svgs/Revenue.svg';
 
 export { default as logoImg } from './images/logo.png'
-
+export { default as passport } from './images/passport.jpg'
 

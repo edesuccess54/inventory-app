@@ -6,15 +6,15 @@ import React from 'react'
 const Statstics = () => {
   return (
     <>
-        <div className="flex gap-5">
-          <OverViewCard heading="Sales Overview">
-            <div className="mt-[22px] flex gap-5">
-              <ItemCard title="Sales" amount={1000} icon={SalesIcon} color="#E8F1FD"/>
-              <ItemCard title="Revenue" amount={1000} icon={RevenueIcons} color="#ECEAFF"/>
-              <ItemCard title="Profit" amount={1000} icon={ProfitIcon} color="#FFEEDB"/>
-              <ItemCard title="Cost" amount={1000} icon={CostIcon} color="#EBFFED" last={true} />
-            </div>
-          </OverViewCard>
+      <div className="flex gap-3">
+        <OverViewCard heading="Sales Overview">
+          <div className="mt-[22px] flex gap-5">
+            <ItemCard title="Sales" amount={1000} icon={SalesIcon} color="#E8F1FD"/>
+            <ItemCard title="Revenue" amount={1000} icon={RevenueIcons} color="#ECEAFF"/>
+            <ItemCard title="Profit" amount={1000} icon={ProfitIcon} color="#FFEEDB"/>
+            <ItemCard title="Cost" amount={1000} icon={CostIcon} color="#EBFFED" last={true} />
+          </div>
+        </OverViewCard>
 
         <div className="basis-[380px]">
           <OverViewCard heading="Inventory Summary">
@@ -26,7 +26,7 @@ const Statstics = () => {
         </div>
       </div>
 
-      <div className="flex gap-5">
+      <div className="flex gap-3">
         <OverViewCard heading="Purchase Overview">
           <div className="mt-[22px] flex gap-5">
             <ItemCard title="Purchase" total={82} icon={PurchaseBagIcon} color="#E8F1FD"/>
