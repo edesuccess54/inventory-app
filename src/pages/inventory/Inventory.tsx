@@ -1,14 +1,32 @@
-import OverViewCard from '@/components/dashboard/OverViewCard'
 import React from 'react'
+import InventoryOverAll from './components/InventoryOverAll'
+import { Button } from '@/components/buttons'
+import Image from 'next/image'
+import { FilterIcon } from '@/assets'
+import InventoryTable from './table/Index'
 
 const Inventory = () => {
   return (
-    <div>
-        <OverViewCard heading="Inventory Overview">
+    <>
+      <InventoryOverAll />
+      
+      <div className='mt-[22px] rounded-lg px-3 py-1 bg-background-white'>
+        <div className='flex justify-between items-center lg:mb-[22px]'>
+          <h2 className='text-text-default text-xl font-medium'>Products</h2>
 
-            <h1>hello</h1>
-        </OverViewCard>
-    </div>
+          <div className='grid grid-cols-3 gap-3'>
+            <Button type='button'>Add product</Button>
+            <Button type='button' variant='outline' className='flex items-center gap-2'> 
+              <Image src={FilterIcon} alt='filter icon' /> Filters
+            </Button>
+            <Button type='button' variant='outline'>Download all</Button>
+          </div>
+        </div>
+
+        <InventoryTable />
+      </div>
+
+    </>
   )
 }
 

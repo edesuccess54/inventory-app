@@ -10,6 +10,7 @@ export { default as ProfitIcon } from './svgs/Profit.svg';
 export { default as PurchaseBagIcon } from './svgs/PurchaseBag.svg';
 export { default as SuppliersIcon } from './svgs/Suppliers.svg';
 export { default as RevenueIcons } from './svgs/Revenue.svg';
+export { default as FilterIcon } from './svgs/filter-icon.svg'
 
 export { default as logoImg } from './images/logo.png'
 export { default as passport } from './images/passport.jpg'
