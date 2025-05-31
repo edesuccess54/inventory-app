@@ -32,11 +32,12 @@ h6 {
   --color-background-white: #ffffff;
 
   /* Text  */
-  --color-text-default: #383E49;
-  --color-text-subdued: #858D9D;
-  --color-text-dark: #5D6679;
-  --color-text-grey: #48505E;
+  --color-text-default: #383e49;
+  --color-text-subdued: #858d9d;
+  --color-text-dark: #5d6679;
+  --color-text-grey: #48505e;
   --color-text-grey-700: #667085;
+  --color-text-blue: #0F50AA;
 }
 
 /* @media (prefers-color-scheme: dark) {

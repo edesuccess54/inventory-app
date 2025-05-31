@@ -1,5 +1,5 @@
-import { Button } from '@/components/buttons'
-import Link from 'next/link'
+import { Button } from "@/components/buttons";
+import Link from "next/link";
 
 const notFound = () => {
   return (
@@ -12,15 +12,15 @@ const notFound = () => {
           Let’s figure out what’s going on together
         </p>
         <p className="text-text-secondary dark:text-dark-text-secondary text-sm mb-8 lg:max-w-[394px]">
-          Usually, this could be caused by a network error, try refreshing your
-          network and reloading the page
+          Usually, this could be caused by a network error, try refreshing your network and
+          reloading the page
         </p>
         <Button type="button">
           <Link href="/dashboard">Go home</Link>
         </Button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default notFound
+export default notFound;

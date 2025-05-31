@@ -1,6 +1,3 @@
-import {mergeClassess} from './twMerge'
+import { mergeClassess } from "./twMerge";
 
-
-export {
-    mergeClassess
-}
+export { mergeClassess };

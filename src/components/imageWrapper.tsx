@@ -1,4 +1,4 @@
-import Image,{ StaticImageData }  from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 interface ImageWrapperProps {
@@ -7,12 +7,7 @@ interface ImageWrapperProps {
   className?: string;
 }
 
-const ImageWrapper: React.FC<ImageWrapperProps> = ({
-  src,
-  alt,
-  className,
-  ...rest
-}) => {
+const ImageWrapper: React.FC<ImageWrapperProps> = ({ src, alt, className, ...rest }) => {
   return <Image src={src} alt={alt ?? "image"} className={className} {...rest} />;
 };
 

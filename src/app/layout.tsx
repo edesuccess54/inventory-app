@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { ModalProvider } from "@/context/ModalContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,9 +34,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <QueryClientProvider client={queryClient}>
-          {children}
+          <ModalProvider>{children}</ModalProvider>
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
+        <div id="modal-id"></div>
       </body>
     </html>
   );

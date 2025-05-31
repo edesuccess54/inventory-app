@@ -1,10 +1,8 @@
-import React from "react";
 import TableHead from "./TableHead";
 import TableData from "./TableData";
-import { Button } from "@/components/buttons";
 import { fakeProducts } from "@/mock/fakeProducts";
 
-const InventoryTable = () => {
+const BestSellingCategory = () => {
   return (
     <>
       <table className="w-full">
@@ -20,22 +18,8 @@ const InventoryTable = () => {
           ))}
         </tbody>
       </table>
-
-      <div className="flex justify-between items-center">
-        <div>
-          <Button type="button" variant="outline" className="min-w-[100px]">
-            Previous
-          </Button>
-        </div>
-        <p>Page 1 of 10</p>
-        <div>
-          <Button type="button" variant="outline" className="min-w-[100px]">
-            Next
-          </Button>
-        </div>
-      </div>
     </>
   );
 };
 
-export default InventoryTable;
+export default BestSellingCategory;

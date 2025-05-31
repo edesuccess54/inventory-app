@@ -3,11 +3,11 @@ export type IconType = ForwardRefExoticComponent<
 >;
 
 declare global {
-    interface MenuListProps {
-        title: string,
-        href: string,
-        icon: IconType
-    }
+  interface MenuListProps {
+    title: string;
+    href: string;
+    icon: IconType;
+  }
 }
 
-export {}
+export {};
