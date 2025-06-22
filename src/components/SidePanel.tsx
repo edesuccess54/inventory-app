@@ -13,7 +13,7 @@ import { logoImg } from "@/assets";
 const SidePanel: React.FC = () => {
   const isActive = usePathname();
   return (
-    <div className="w-[280px] h-screen pb-8 bg-[#fff]">
+    <div className="w-[230px] h-screen pb-8 bg-[#fff]">
       <div className="flex items-center py-4 gap-3 px-6">
         <Image src={logoImg} alt="logo" width={48} />
         <p className="text-[#1570EF]">KANBAN</p>

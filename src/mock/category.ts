@@ -8,8 +8,17 @@ export const bestSellingCatgories = [
 
     {
         id: 2,
-        category: "Whiskey & Wines",
+        category: "Beverages",
         turnOver: 26000,
-        increasedBy: 2.3
-    }
+        increasedBy: 3
+    },
+
+    {
+        id: 3,
+        category: "Beer",
+        turnOver: 20000,
+        increasedBy: 1.5
+    },
+
+
 ]

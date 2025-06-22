@@ -8,6 +8,7 @@ import { FilterIcon } from "@/assets";
 import InventoryTable from "./table/Index";
 import AddProductModal from "./components/AddProductModal";
 import { toggleModal } from "@/components/modal/modalManager";
+import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Modal } from "@heroui/react";
 
 const Inventory = () => {
   return (
@@ -22,9 +23,21 @@ const Inventory = () => {
             <Button type="button" onClick={() => toggleModal("add-product-modal")}>
               Add product
             </Button>
-            <Button type="button" variant="outline" className="flex items-center gap-2">
-              <Image src={FilterIcon} alt="filter icon" /> Filters
-            </Button>
+            
+
+            <Dropdown>
+              <DropdownTrigger>
+                trigger
+                {/* <Button type="button" variant="outline" className="flex items-center gap-2">
+                  <Image src={FilterIcon} alt="filter icon" /> Filters
+                </Button> */}
+              </DropdownTrigger>
+
+              <DropdownMenu>
+                <DropdownItem key="in-stock">In stock</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+            
             <Button type="button" variant="outline">
               Download all
             </Button>
@@ -34,6 +47,13 @@ const Inventory = () => {
         <InventoryTable />
       </div>
       <AddProductModal />
+
+      <Modal>
+        <div>
+          this is a modal here
+        </div>
+
+      </Modal>
     </>
   );
 };

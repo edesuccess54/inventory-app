@@ -10,7 +10,7 @@ const AddProductModal = () => {
       <div className="bg-background-white p-8 lg:w-[523px] rounded-sm">
         <h2>New product</h2>
 
-        <div className="my-5 flex justify-center items-center gap-5">
+        {/* <div className="my-5 flex justify-center items-center gap-5">
           <div className="w-20 h-20 rounded-sm border border-dashed border-[#9D9D9D]"></div>
 
           <RegularInput
@@ -26,7 +26,7 @@ const AddProductModal = () => {
             <p className="text-center">or</p>
             <p>Browse image</p>
           </label>
-        </div>
+        </div> */}
 
         <div className="*:mb-5">
           <div className="flex justify-between items-center">

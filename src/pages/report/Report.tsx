@@ -2,6 +2,7 @@ import Card from '@/components/Card'
 import Link from 'next/link'
 import React from 'react'
 import BestSellingCategory from './table/Index'
+import { Button } from '@/components/buttons'
 
 const DetailCard = ({amount, name, color}:{
     amount: number,
@@ -43,16 +44,19 @@ const Report = () => {
 
                <div className='mt-5'>
                 <BestSellingCategory />
-
-                    <div className='flex justify-between items-center'>
-                        <p>Vegetable</p>
-                        <p>₹26,000</p>
-                        <p className='bg-red-800'>3.2%</p>
-                    </div>
-
                 </div>
             </Card>
         </div>
+        
+        <div className='my-5'>
+            <div className='flex justify-between items-center'>
+                <p>Profit & Loss</p>
+                 <button className='border border-border-primary px-4 py-1.5 rounded-sm'> Weekly </button>
+            </div>
+
+        </div>
+
+
     </div>
   )
 }
