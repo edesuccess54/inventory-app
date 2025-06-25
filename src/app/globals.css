@@ -29,6 +29,7 @@ h6 {
 
   /* background  */
   --color-background-white: #ffffff;
+  --color-background-default: #f0f1f3;
 
   /* Text  */
   --color-text-default: #383e49;

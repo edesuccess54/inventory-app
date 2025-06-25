@@ -1,23 +1,45 @@
-import React from "react";
+"use client"
+
+import React, { useMemo } from "react";
 import TableHead from "./TableHead";
 import TableData from "./TableData";
 import { Button } from "@/components/buttons";
-import { fakeProducts } from "@/mock/fakeProducts";
+import { useInventorySlice } from "@/redux/inventory/inventory.slice";
+
 
 const InventoryTable = () => {
+  const {filter, products} = useInventorySlice();
+
+  const sortfilteredProduct = useMemo(() => {
+    let filteredProducts = products;
+    if(filter !== 'all') {
+      filteredProducts = products.filter((product) => product.availability === filter)
+    }
+
+    filteredProducts = [...filteredProducts]
+
+    return filteredProducts
+  }, [products, filter])
+
   return (
     <>
       <table className="w-full">
         <TableHead />
         <tbody>
-          {fakeProducts.map((product) => (
-            <tr
-              key={product.id}
-              className="lg:border-b last:border-b-0 border-border-primary *:py-3 text-text-grey font-medium text-sm"
-            >
-              <TableData product={product} />
+          {sortfilteredProduct.length === 0 ? (
+            <tr>
+              <td colSpan={5} className="text-center text-text-grey font-medium text-sm py-3">No product available</td>
             </tr>
-          ))}
+          ) : (
+            sortfilteredProduct?.map((product) => (
+              <tr
+                key={product.id}
+                className="lg:border-b last:border-b-0 border-border-primary *:py-3 text-text-grey font-medium text-sm"
+              >
+                <TableData product={product} />
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
 

@@ -3,14 +3,13 @@
 import React from "react";
 import InventoryOverAll from "./components/InventoryOverAll";
 import { Button } from "@/components/buttons";
-import Image from "next/image";
-import { FilterIcon } from "@/assets";
 import InventoryTable from "./table/Index";
 import AddProductModal from "./components/AddProductModal";
 import { toggleModal } from "@/components/modal/modalManager";
-import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Modal } from "@heroui/react";
+import FilterButton from "./components/FilterButton";
 
 const Inventory = () => {
+
   return (
     <>
       <InventoryOverAll />
@@ -23,20 +22,8 @@ const Inventory = () => {
             <Button type="button" onClick={() => toggleModal("add-product-modal")}>
               Add product
             </Button>
-            
 
-            <Dropdown>
-              <DropdownTrigger>
-                trigger
-                {/* <Button type="button" variant="outline" className="flex items-center gap-2">
-                  <Image src={FilterIcon} alt="filter icon" /> Filters
-                </Button> */}
-              </DropdownTrigger>
-
-              <DropdownMenu>
-                <DropdownItem key="in-stock">In stock</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
+            <FilterButton />
             
             <Button type="button" variant="outline">
               Download all
@@ -47,13 +34,6 @@ const Inventory = () => {
         <InventoryTable />
       </div>
       <AddProductModal />
-
-      <Modal>
-        <div>
-          this is a modal here
-        </div>
-
-      </Modal>
     </>
   );
 };
