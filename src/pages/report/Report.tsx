@@ -12,7 +12,7 @@ const DetailCard = ({amount, name, color}:{
     return (
         <div className='flex flex-col justify-between'>
             <p className='text-[#5D6679] font-medium text-base'>${Number(amount).toLocaleString()}</p>
-            <p className="text-sm" style={{color:color ? color : ""}}>{name}</p>
+            <p className="text-sm mt-3" style={{color:color ? color : ""}}>{name}</p>
         </div>
     )
 }
@@ -36,6 +36,7 @@ const Report = () => {
                     <DetailCard name='YoY Profit'amount={18300}color='#667085' />
                 </div>
             </Card>
+
             <Card>
                <div className='flex justify-between items-center'>
                 <p className='text-xl font-medium text-text-default'>Best selling category</p>
@@ -55,8 +56,6 @@ const Report = () => {
             </div>
 
         </div>
-
-
     </div>
   )
 }

@@ -5,6 +5,43 @@
 @custom-variant dark (&:where(.dark, .dark *));
 /* @custom-variant dark (&:is(.dark *)); */
 
+@layer base {
+  @font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('/font/openSans-Regular.ttff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('/font/openSans-Bold.ttff') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('/font/openSans-Light.ttff') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-Medium';
+    src: url('/font/OpenSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url('/font/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+}
+
 :root {
   --background: #f0f1f3;
   --foreground: #858d9d;
@@ -20,6 +57,8 @@ h6 {
 }
 
 @theme {
+  --font-display: 'OpenSans-Regular', 'ui-sans-serif', 'system-ui';
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-border-primary: #d0d3d9;
@@ -50,5 +89,4 @@ h6 {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
