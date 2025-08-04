@@ -40,6 +40,13 @@
     font-weight: 600;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: 'Inter_18pt-Regular';
+    src: url('/font/Inter_18pt-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 }
 
 :root {
@@ -57,7 +64,7 @@ h6 {
 }
 
 @theme {
-  --font-display: 'OpenSans-Regular', 'ui-sans-serif', 'system-ui';
+  --font-display: 'Inter_18pt-Regular', 'ui-sans-serif', 'system-ui';
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
