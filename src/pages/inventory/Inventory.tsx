@@ -30,7 +30,6 @@ const Inventory = () => {
             </Button>
           </div>
         </div>
-
         <InventoryTable />
       </div>
       <AddProductModal />

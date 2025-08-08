@@ -106,6 +106,7 @@ const SalesChart: React.FC = () => {
     labels,
     datasets: [
       {
+        
         label: "Purchase",
         data: [1000, 5000, 400, 4564, 5645, 5465, 1000, 5000, 400, 4564, 5645, 5465],
         backgroundColor: (context: any) => {
