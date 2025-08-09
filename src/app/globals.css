@@ -43,9 +43,13 @@ h6 {
   --color-text-default: #383e49;
   --color-text-subdued: #858d9d;
   --color-text-dark: #5d6679;
-  --color-text-grey: #48505e;
+  --color-text-highlight: #48505e;
   --color-text-grey-700: #667085;
   --color-text-blue: #0F50AA;
+
+  /* border */
+  --color-border-primary: #F0F1F3;
+  --color-border-active: #1366D9;
 }
 
 /* @media (prefers-color-scheme: dark) {

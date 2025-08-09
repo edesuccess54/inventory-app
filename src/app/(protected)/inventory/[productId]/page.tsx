@@ -1,7 +1,12 @@
 import ProductDetails from '@/pages/inventory/details/ProductDetails'
 
-const page: React.FC = () => {
-  return <ProductDetails />
+interface ProductDetailsProps {
+  params: Promise<{ productId: string }>
+}
+
+const page: React.FC<ProductDetailsProps> = async ({params}) => {
+  const { productId } = await params;
+  return <ProductDetails productId ={productId} />
 }
 
 export default page

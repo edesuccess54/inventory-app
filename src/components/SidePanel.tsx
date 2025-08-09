@@ -23,7 +23,7 @@ const SidePanel: React.FC = () => {
           {menuList.map(({ title, href, icon: ICON }) => (
             <Link
               key={title}
-              className={`flex items-center gap-3 px-6 py-2 ${isActive === href && "text-[#1570EF]"}`}
+              className={`flex items-center gap-3 px-6 py-2 ${(isActive === href || isActive?.includes(href)) && "text-[#1570EF]"}`}
               href={href}
             >
               <ICON /> {title}
