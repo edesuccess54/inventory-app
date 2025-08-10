@@ -1,8 +1,3 @@
-import ImageWrapper from './imageWrapper';
-import {mergeClassess} from './twMerge'
+import { mergeClassess } from "./twMerge";
 
-
-export {
-    ImageWrapper,
-    mergeClassess
-}
+export { mergeClassess };

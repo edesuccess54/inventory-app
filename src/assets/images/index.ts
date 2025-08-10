@@ -1,7 +1,6 @@
 import logoImg from "./logo.png";
-import googleIcon from "./googleIcon.svg";
-
+import passport from "./passport.jpg";
 export default {
   logoImg,
-  googleIcon,
+  passport,
 };

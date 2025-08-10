@@ -5,10 +5,12 @@ export type IconType = ForwardRefExoticComponent<
 declare global {
   interface RegularInputProps {
     name: string;
+    value?: string | number;
     type: string;
     placeholder?: string;
     id?: string;
     className?: string;
+    disabled?: boolean;
     label?: string;
     icon?: IconType;
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;

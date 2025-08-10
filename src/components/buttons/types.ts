@@ -1,4 +1,3 @@
-
 export type buttonStylesProp = {
-    variant?: "solid" | "outline" | "ghost" | "danger";
-  };
+  variant?: "solid" | "outline" | "ghost" | "danger";
+};

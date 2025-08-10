@@ -1,25 +1,21 @@
-import { Geist, Geist_Mono } from "next/font/google";
+"use client";
+
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Providers from "./Providers";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased px-10`}>
-        {children}
+      <body>
+        <Providers>
+          {children}
+        </Providers>
+        <div id="modal-id"></div>
       </body>
     </html>
   );

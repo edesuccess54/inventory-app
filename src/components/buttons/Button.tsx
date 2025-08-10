@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import { mergeClassess } from "@/utils";
 import { clsx } from "clsx";
 import { buttonStyles } from "./styles";
@@ -11,13 +12,11 @@ const Button = ({
   variant,
 }: {
   type: "submit" | "reset" | "button";
-  className?: string,
-  variant?: "solid" | "outline" | "ghost" | "danger"
+  className?: string;
+  variant?: "solid" | "outline" | "ghost" | "danger";
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   children: React.ReactNode;
 }) => {
-
-
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (onClick) {
       onClick(event);
@@ -26,16 +25,15 @@ const Button = ({
       event.stopPropagation();
     }
   };
-  
+
   return (
     <button
       type={type}
-      className={clsx(mergeClassess(buttonStyles({variant})), className)}
+      className={clsx(mergeClassess(buttonStyles({ variant })), className)}
       onClick={handleClick}
     >
       {children}
     </button>
-    
   );
 };
 

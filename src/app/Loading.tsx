@@ -1,8 +1,11 @@
-import Spinner from '@/components/Spinner/Index'
-import React from 'react'
+import Spinner from "@/components/Spinner/Index";
 
-const loading = () => {
-  return <Spinner variant='ring' size='lg' color='primary' />
-}
+const Loading = () => {
+  return (
+    <div className="h-screen flex justify-center items-center">
+      <Spinner variant="pageLoad" size="lg" color="primary" />
+    </div>
+  );
+};
 
-export default loading
+export default Loading;
