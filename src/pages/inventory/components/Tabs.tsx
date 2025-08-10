@@ -14,7 +14,8 @@ const Tabs: React.FC<TabsProps> = ({ activeTab, onClick }) => {
       {tabs.map((tab) => (
         <button
           key={tab}
-          className={`${activeTab === tab ? "text-[#48505E]" : "text-[#667085"} font-normal -mb-0.5 text-base py-4 cursor-pointer ${activeTab === tab ? "border-b-3 border-b-border-active" : ""}`}
+          disabled={activeTab === tab}
+          className={`${activeTab === tab ? "text-[#1A73E8] cursor-not-allowed border-b-3 border-b-border-active" : "text-[#667085] cursor-pointer"} font-normal -mb-0.5 text-base py-4`}
           onClick={onClick}
         >
           {tab}
