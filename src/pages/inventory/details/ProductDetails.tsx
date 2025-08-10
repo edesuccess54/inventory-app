@@ -28,7 +28,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId }) => {
     <div className="p-4 bg-background-white rounded-lg h-full">
       <div className="flex justify-between lg:mb-8">
         <h2 className="text-xl font-medium">{ProductDetails?.productName}</h2>
-        <div className='flex items-center gap-3'>
+        <div className="flex items-center gap-3">
           <Button type="button" variant="outline">
             Edit detail
           </Button>
@@ -41,8 +41,8 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId }) => {
 
       <Tabs activeTab={activeTab} onClick={handleSwitchTab} />
 
-      <div className="mt-8">
-        {activeTab === "Overview" && <OverViews />}
+      <div className="mt-8 overflow-y-scroll h-[calc(100vh-308px)] ">
+        {activeTab === "Overview" && <OverViews product={ProductDetails} />}
         {activeTab === "Purchases" && <Purchases />}
         {activeTab === "Adjustments" && <Adjustments />}
         {activeTab === "History" && <History />}
