@@ -2,7 +2,8 @@ import Image from 'next/image'
 import { FilterIcon } from '@/assets'
 import { useInventorySlice } from '@/redux/inventory/inventory.slice'
 import { dispatch } from '@/redux/store'
-import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@heroui/react'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
+import { Check } from 'lucide-react'
 
 const FilterButton = () => {
     const {filter, setUpdateFilter } = useInventorySlice();
@@ -44,26 +45,26 @@ const FilterButton = () => {
         dispatch(setUpdateFilter(selected))
       }
   return (
-    <Dropdown radius="sm" placement="bottom-end" showArrow>
-        <DropdownTrigger>
-        <button type="button"  className="flex items-center gap-2 cursor-pointer px-2 py-2 my-3 rounded-md border border-border-primary w-full">
-            <Image src={FilterIcon} alt="filter icon" /> Filters
-        </button>
-        </DropdownTrigger>
+    <DropdownMenu modal={false}>
+      <DropdownMenuTrigger className="flex items-center gap-2 cursor-pointer px-2 py-2 my-3 rounded-md border border-border-primary w-full">
+        <Image src={FilterIcon} alt="filter icon" /> Filters
+      </DropdownMenuTrigger>
 
-        <DropdownMenu selectedKeys={filter} onAction={(key) => handleFilter(key)}>
-        {filterMenuItems.map(({key, textValue, text, className}) => (
-            <DropdownItem
-            key={key} 
+      <DropdownMenuContent loop={true}>
+        {filterMenuItems.map(({ key, textValue, text, className }) => (
+          <DropdownMenuItem
+            onSelect={() => handleFilter(textValue)}
+            key={key}
             textValue={textValue}
             className={`${className}`}
-            >
+          >
             {text}
-            </DropdownItem>
+            {filter === textValue && <Check className="h-4 w-4 text-text-light-blue" />}
+          </DropdownMenuItem>
         ))}
-        </DropdownMenu>
-    </Dropdown>
-  )
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
 }
 
 export default FilterButton

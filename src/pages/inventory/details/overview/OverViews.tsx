@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react'
 
-interface ProductProps {
-  product: ProductProps;
+interface ProductDetailsProps {
+  product: ProductProps | undefined;
 }
 
 const renderProductDetails = (label: string, value: string) => {
@@ -14,10 +14,9 @@ const renderProductDetails = (label: string, value: string) => {
   );
 }
 
-const OverViews:React.FC<ProductProps> = ({product}) => {
-  
+const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
   return (
-    <div className='px-5'>
+    <div className="px-5">
       <div className="flex justify-between mb-6">
         <div>
           <h1 className="text-base font-semibold text-text-highlight mb-2">Primary Details</h1>
@@ -69,7 +68,7 @@ const OverViews:React.FC<ProductProps> = ({product}) => {
               </tr>
             </thead>
 
-            <tbody className='text-sm font-medium'>
+            <tbody className="text-sm font-medium">
               <tr className="border-b border-border-primary">
                 <td className="py-3 text-text-subdued pl-2">Main Warehouse</td>
                 <td className="py-3 text-right lg:pr-10 pl-2 text-text-light-blue">20</td>
@@ -85,6 +84,6 @@ const OverViews:React.FC<ProductProps> = ({product}) => {
       </div>
     </div>
   );
-}
+};
 
 export default OverViews

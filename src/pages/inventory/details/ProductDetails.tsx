@@ -4,16 +4,16 @@ import { Button } from '@/components/buttons';
 import { fakeProducts } from '@/mock/fakeProducts';
 import React, { useEffect, useState } from 'react'
 import Tabs from '../components/Tabs';
-import OverViews from './OverViews';
-import Purchases from './Purchases';
-import Adjustments from './Adjustments';
-import History from './History';
+import OverViews from './overview/OverViews';
+import Purchases from './purchases/Purchases';
+import Adjustments from './adjustments/Adjustments';
+import History from './history/History';
 
-interface ProductDetailsProps {
+interface ProductIdProps {
   productId: string;
 }
 
-const ProductDetails: React.FC<ProductDetailsProps> = ({ productId }) => {
+const ProductDetails: React.FC<ProductIdProps> = ({ productId }) => {
   const [activeTab, setActiveTab] = useState("Overview");
   const ProductDetails = fakeProducts.find((product) => product.id === Number(productId));
 
@@ -41,7 +41,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId }) => {
 
       <Tabs activeTab={activeTab} onClick={handleSwitchTab} />
 
-      <div className="mt-8 overflow-y-scroll h-[calc(100vh-320px)] pb-4">
+      <div className="mt-8 overflow-y-auto h-[calc(100vh-320px)] pb-4">
         {activeTab === "Overview" && <OverViews product={ProductDetails} />}
         {activeTab === "Purchases" && <Purchases />}
         {activeTab === "Adjustments" && <Adjustments />}

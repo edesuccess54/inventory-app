@@ -2,7 +2,6 @@
 
 import { ModalProvider } from '@/context/ModalContext'
 import ReduxProvider from '@/redux/Provider'
-import { HeroUIProvider } from '@heroui/react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
@@ -23,11 +22,9 @@ const Providers = ({children}: {
   return (
     <QueryClientProvider client={queryClient}>
       <ReduxProvider>
-        <HeroUIProvider>
-            <ModalProvider>
-                {children}
-            </ModalProvider>
-        </HeroUIProvider>
+        <ModalProvider>
+            {children}
+        </ModalProvider>
       </ReduxProvider>
         <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
