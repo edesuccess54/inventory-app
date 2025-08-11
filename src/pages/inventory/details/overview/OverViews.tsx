@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import React from 'react'
 
+interface ProductDetailsProps {
+  product: ProductProps | undefined;
+}
+
 const renderProductDetails = (label: string, value: string) => {
   return (
     <div className="flex justify-between w-[350px] mb-6">
@@ -10,10 +14,9 @@ const renderProductDetails = (label: string, value: string) => {
   );
 }
 
-const OverViews:React.FC<{product: ProductProps}> = ({product}) => {
-  
+const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
   return (
-    <div>
+    <div className="px-5">
       <div className="flex justify-between mb-6">
         <div>
           <h1 className="text-base font-semibold text-text-highlight mb-2">Primary Details</h1>
@@ -52,8 +55,35 @@ const OverViews:React.FC<{product: ProductProps}> = ({product}) => {
           </div>
         </div>
       </div>
+
+      <div className="mt-6 max-w-[689px]">
+        <h1 className="text-base font-semibold text-text-highlight mb-4">Stock Location</h1>
+
+        <div>
+          <table className="w-full table-auto border-collapse border-border-primary">
+            <thead className="bg-background-default">
+              <tr className="border-b border-border-primary text-text-dark font-semibold text-sm">
+                <th className="text-left py-3 pl-2">Location</th>
+                <th className="text-right py-3 lg:pr-10 pl-2">Stock in hand</th>
+              </tr>
+            </thead>
+
+            <tbody className="text-sm font-medium">
+              <tr className="border-b border-border-primary">
+                <td className="py-3 text-text-subdued pl-2">Main Warehouse</td>
+                <td className="py-3 text-right lg:pr-10 pl-2 text-text-light-blue">20</td>
+              </tr>
+
+              <tr className="border-b border-border-primary">
+                <td className="py-3 text-text-subdued pl-2">Secondary Warehouse</td>
+                <td className="py-3 text-right lg:pr-10 pl-2 text-text-light-blue">14</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default OverViews
