@@ -41,7 +41,7 @@ const ProductDetails: React.FC<ProductIdProps> = ({ productId }) => {
 
       <Tabs activeTab={activeTab} onClick={handleSwitchTab} />
 
-      <div className="mt-8 overflow-y-auto h-[calc(100vh-320px)] pb-4">
+      <div className="mt-8 overflow-y-auto h-[calc(100vh-320px)] pb-4 px-5">
         {activeTab === "Overview" && <OverViews product={ProductDetails} />}
         {activeTab === "Purchases" && <Purchases />}
         {activeTab === "Adjustments" && <Adjustments />}

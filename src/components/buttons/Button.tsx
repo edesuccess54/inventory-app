@@ -29,7 +29,7 @@ const Button = ({
   return (
     <button
       type={type}
-      className={clsx(mergeClassess(buttonStyles({ variant })), className)}
+      className={clsx(mergeClassess(buttonStyles({ variant }), className))}
       onClick={handleClick}
     >
       {children}

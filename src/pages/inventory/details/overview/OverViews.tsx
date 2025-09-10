@@ -16,7 +16,7 @@ const renderProductDetails = (label: string, value: string) => {
 
 const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
   return (
-    <div className="px-5">
+    <>
       <div className="flex justify-between mb-6">
         <div>
           <h1 className="text-base font-semibold text-text-highlight mb-2">Primary Details</h1>
@@ -82,7 +82,7 @@ const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
           </table>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

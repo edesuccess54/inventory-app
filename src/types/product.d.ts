@@ -9,6 +9,16 @@ declare global {
     expiringDate: string;
     availability: Status;
   }
+
+  interface PurchasedProductProps {
+    id: number;
+    purchasedId: string;
+    productName: string;
+    supplierName: string;
+    quantity: number;
+    price: number;
+    date: string;
+  }
 }
 
 export {};
