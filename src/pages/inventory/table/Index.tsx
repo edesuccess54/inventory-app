@@ -46,7 +46,7 @@ const InventoryTable = () => {
             sortfilteredProduct?.map((product) => (
               <tr
                 key={product.id}
-                className="lg:border-b last:border-b-0 border-border-primary *:py-3 text-text-grey font-medium text-sm cursor-pointer"
+                className="lg:border-b last:border-b-0 border-border-primary *:py-3 text-text-grey-700 text-sm cursor-pointer"
                 onClick={() => handleSelectedProduct(String(product.id))}
               >
                 <TableData product={product} />

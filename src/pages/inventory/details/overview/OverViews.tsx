@@ -19,7 +19,7 @@ const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
     <>
       <div className="flex justify-between mb-6">
         <div>
-          <h1 className="text-base font-semibold text-text-highlight mb-2">Primary Details</h1>
+          <h1 className="text-base font-semibold text-text-grey-700 mb-2">Primary Details</h1>
 
           {renderProductDetails("Product name", "Maggi")}
           {renderProductDetails("Product ID", "456567")}
@@ -27,7 +27,7 @@ const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
           {renderProductDetails("Expiry Date", "13/4/23")}
           {renderProductDetails("Threshold Value", "12")}
 
-          <h1 className="text-base font-semibold text-text-highlight mt-8 mb-2">
+          <h1 className="text-base font-semibold text-text-grey-700 mt-8 mb-2">
             Supplier Details
           </h1>
 
@@ -57,7 +57,7 @@ const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
       </div>
 
       <div className="mt-6 max-w-[689px]">
-        <h1 className="text-base font-semibold text-text-highlight mb-4">Stock Location</h1>
+        <h1 className="text-base font-semibold text-text-grey-700 mb-4">Stock Location</h1>
 
         <div>
           <table className="w-full table-auto border-collapse border-border-primary">

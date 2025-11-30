@@ -6,7 +6,7 @@ const PurchaseTable = () => {
 
   return (
     <table className="w-full">
-      <thead className="text-left border-b border-border-primary text-text-grey-700 font-medium text-sm">
+      <thead className="text-left border-b border-border-primary text-text-grey-500 font-medium text-sm">
         <tr className="*:py-3">
           <th>Purchase ID</th>
           <th>Date</th>
@@ -27,7 +27,7 @@ const PurchaseTable = () => {
           purchasedProducts?.map((product) => (
             <tr
               key={product.id}
-              className="lg:border-b last:border-b-0 border-border-primary *:py-3 text-text-grey font-medium text-sm cursor-pointer"
+              className="lg:border-b last:border-b-0 border-border-primary *:py-3 text-text-grey-700 font-medium text-sm cursor-pointer"
             >
               <TableData product={product} />
             </tr>
