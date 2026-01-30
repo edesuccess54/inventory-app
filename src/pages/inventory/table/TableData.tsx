@@ -11,13 +11,14 @@ const TableData: React.FC<TableDataProps> = ({ product }) => {
     <>
       <td>{productName}</td>
       <td>${Number(productPrice).toLocaleString()}</td>
-      <td>{productQuantity} {`${productQuantity > 1 ? 'Cartons' : 'Carton'}`}</td>
       <td>
-        {(expiringDate !== "expired" && expiringDate != "does not expire") ? (
+        {productQuantity} {`${productQuantity > 1 ? "Cartons" : "Carton"}`}
+      </td>
+      <td>
+        {expiringDate !== "expired" && expiringDate != "does not expire" ? (
           <p>{expiringDate}</p>
-        ): (
-        <p className={`${getStatusClass(expiringDate)}`}>{getStatusText(expiringDate)}</p>
-
+        ) : (
+          <p className={`${getStatusClass(expiringDate)}`}>{getStatusText(expiringDate)}</p>
         )}
       </td>
       <td>

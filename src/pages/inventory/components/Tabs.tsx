@@ -25,4 +25,4 @@ const Tabs: React.FC<TabsProps> = ({ activeTab, onClick }) => {
   );
 };
 
-export default Tabs
+export default Tabs;

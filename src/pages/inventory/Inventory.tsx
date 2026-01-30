@@ -9,7 +9,6 @@ import { toggleModal } from "@/components/modal/modalManager";
 import FilterButton from "./components/FilterButton";
 
 const Inventory = () => {
-
   return (
     <>
       <InventoryOverAll />
@@ -24,7 +23,7 @@ const Inventory = () => {
             </Button>
 
             <FilterButton />
-            
+
             <Button type="button" variant="outline">
               Download all
             </Button>

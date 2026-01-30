@@ -1,7 +1,7 @@
-import React from 'react'
-import FilterButton from './FilterButton'
-import { Button } from '@/components/buttons'
-import AdjustmentTable from './table/Index';
+import React from "react";
+import FilterButton from "./FilterButton";
+import { Button } from "@/components/buttons";
+import AdjustmentTable from "./table/Index";
 
 const Adjustments = () => {
   return (
@@ -18,6 +18,6 @@ const Adjustments = () => {
       <AdjustmentTable />
     </>
   );
-}
+};
 
-export default Adjustments
+export default Adjustments;

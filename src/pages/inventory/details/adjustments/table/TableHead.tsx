@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const TableHead = () => {
   return (
@@ -13,6 +13,6 @@ const TableHead = () => {
       </tr>
     </thead>
   );
-}
+};
 
-export default TableHead
+export default TableHead;

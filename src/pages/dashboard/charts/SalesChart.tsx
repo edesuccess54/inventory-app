@@ -106,7 +106,6 @@ const SalesChart: React.FC = () => {
     labels,
     datasets: [
       {
-        
         label: "Purchase",
         data: [1000, 5000, 400, 4564, 5645, 5465, 1000, 5000, 400, 4564, 5645, 5465],
         backgroundColor: (context: any) => {
@@ -130,7 +129,11 @@ const SalesChart: React.FC = () => {
     ],
   };
 
-  return <Bar ref={chartRef} options={options} data={data} />;
+  return (
+    <div className="w-full h-full">
+      <Bar ref={chartRef} options={options} data={data} />
+    </div>
+  );
 };
 
 export default SalesChart;

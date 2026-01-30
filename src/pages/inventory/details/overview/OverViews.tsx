@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 interface ProductDetailsProps {
   product: ProductProps | undefined;
@@ -9,10 +9,10 @@ const renderProductDetails = (label: string, value: string) => {
   return (
     <div className="flex justify-between w-[350px] mb-6">
       <p className="font-medium flex-1 text-text-subdued text-sm">{label}</p>
-      <p className='text-left basis-[100px] text-text-dark'>{value}</p>
+      <p className="text-left basis-[100px] text-text-dark">{value}</p>
     </div>
   );
-}
+};
 
 const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
   return (
@@ -27,9 +27,7 @@ const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
           {renderProductDetails("Expiry Date", "13/4/23")}
           {renderProductDetails("Threshold Value", "12")}
 
-          <h1 className="text-base font-semibold text-text-grey-700 mt-8 mb-2">
-            Supplier Details
-          </h1>
+          <h1 className="text-base font-semibold text-text-grey-700 mt-8 mb-2">Supplier Details</h1>
 
           {renderProductDetails("Supplier name", "Ngozi Ebere")}
           {renderProductDetails("Contact Number", "08131597158")}
@@ -86,4 +84,4 @@ const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
   );
 };
 
-export default OverViews
+export default OverViews;

@@ -1,12 +1,12 @@
-import ProductDetails from '@/pages/inventory/details/ProductDetails'
+import ProductDetails from "@/pages/inventory/details/ProductDetails";
 
 interface ProductDetailsProps {
-  params: Promise<{ productId: string }>
+  params: Promise<{ productId: string }>;
 }
 
-const page: React.FC<ProductDetailsProps> = async ({params}) => {
+const page: React.FC<ProductDetailsProps> = async ({ params }) => {
   const { productId } = await params;
-  return <ProductDetails productId ={productId} />
-}
+  return <ProductDetails productId={productId} />;
+};
 
-export default page
+export default page;

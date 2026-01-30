@@ -1,9 +1,8 @@
-import React from 'react'
-import { purchasedProducts } from './mock/purchasedProducts';
-import TableData from './TableData';
+import React from "react";
+import { purchasedProducts } from "./mock/purchasedProducts";
+import TableData from "./TableData";
 
 const PurchaseTable = () => {
-
   return (
     <table className="w-full">
       <thead className="text-left border-b border-border-primary text-text-grey-500 font-medium text-sm">
@@ -36,6 +35,6 @@ const PurchaseTable = () => {
       </tbody>
     </table>
   );
-}
+};
 
-export default PurchaseTable
+export default PurchaseTable;

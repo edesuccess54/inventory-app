@@ -1,12 +1,12 @@
-import React from 'react'
-import TableHead from './TableHead';
-import { purchasedProducts } from '../../purchases/Table/mock/purchasedProducts';
-import TableData from './TableData';
+import React from "react";
+import TableHead from "./TableHead";
+import { purchasedProducts } from "../../purchases/Table/mock/purchasedProducts";
+import TableData from "./TableData";
 
 const AdjustmentTable = () => {
   return (
     <>
-      <table className='w-full'>
+      <table className="w-full">
         <TableHead />
 
         <tbody>
@@ -30,6 +30,6 @@ const AdjustmentTable = () => {
       </table>
     </>
   );
-}
+};
 
-export default AdjustmentTable
+export default AdjustmentTable;

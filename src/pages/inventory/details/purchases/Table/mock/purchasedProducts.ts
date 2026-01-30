@@ -1,5 +1,4 @@
-
-export const purchasedProducts:PurchasedProductProps[] = [
+export const purchasedProducts: PurchasedProductProps[] = [
   {
     id: 1,
     purchasedId: "PUR-001",
@@ -36,5 +35,5 @@ export const purchasedProducts:PurchasedProductProps[] = [
     quantity: 100,
     price: 25.75,
     date: "2023-10-07",
-  }
-]
+  },
+];

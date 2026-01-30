@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
 interface TableDataProps {
   product: PurchasedProductProps;
 }
 
-const TableData:React.FC<TableDataProps> = ({product}) => {
+const TableData: React.FC<TableDataProps> = ({ product }) => {
   return (
     <>
       <td>{product.purchasedId}</td>
@@ -14,7 +14,7 @@ const TableData:React.FC<TableDataProps> = ({product}) => {
       <td>${product.price.toFixed(2)}</td>
       <td>${(product.quantity * product.price).toFixed(2)}</td>
     </>
-  )
-}
+  );
+};
 
-export default TableData
+export default TableData;

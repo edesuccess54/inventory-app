@@ -1,8 +1,8 @@
-import { Button } from '@/components/buttons'
-import RegularInput from '@/components/inputs/RegularInput'
-import { Search, SearchCheck, SearchCheckIcon, SearchXIcon } from 'lucide-react'
-import React from 'react'
-import PurchaseTable from './Table/Index'
+import { Button } from "@/components/buttons";
+import RegularInput from "@/components/inputs/RegularInput";
+import { Search, SearchCheck, SearchCheckIcon, SearchXIcon } from "lucide-react";
+import React from "react";
+import PurchaseTable from "./Table/Index";
 
 const Purchases = () => {
   return (
@@ -13,9 +13,9 @@ const Purchases = () => {
           name=""
           icon={Search}
           placeholder="Search by product name, ID, category etc"
-          className='w-[315px]'
+          className="w-[315px]"
         />
-        <Button type="button" className="min-w-[200px]" >
+        <Button type="button" className="min-w-[200px]">
           Add product
         </Button>
       </div>
@@ -23,6 +23,6 @@ const Purchases = () => {
       <PurchaseTable />
     </>
   );
-}
+};
 
-export default Purchases
+export default Purchases;

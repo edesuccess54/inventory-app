@@ -143,7 +143,11 @@ const RevenueChart = () => {
   //   chart.update();
   // }, []);
 
-  return <Line ref={chartRef} options={options} data={data}></Line>;
+  return (
+    <div className="w-full h-full">
+      <Line ref={chartRef} options={options} data={data}></Line>
+    </div>
+  );
 };
 
 export default RevenueChart;

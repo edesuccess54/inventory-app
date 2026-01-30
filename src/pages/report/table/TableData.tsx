@@ -2,10 +2,10 @@ import React from "react";
 
 interface TableDataProps {
   product: {
-    id: number,
-    category: string,
-    turnOver: number,
-    increasedBy: number
+    id: number;
+    category: string;
+    turnOver: number;
+    increasedBy: number;
   };
 }
 
@@ -15,7 +15,9 @@ const TableData: React.FC<TableDataProps> = ({ product }) => {
     <>
       <td>{category}</td>
       <td>${Number(turnOver).toLocaleString()}</td>
-      <td><p className="text-teal-700">{increasedBy}%</p></td>
+      <td>
+        <p className="text-teal-700">{increasedBy}%</p>
+      </td>
     </>
   );
 };

@@ -13,5 +13,5 @@ export { default as FilterIcon } from "./svgs/filter-icon.svg";
 export { default as logoImg } from "./images/logo.png";
 export { default as passport } from "./images/passport.jpg";
 export { default as dashboardImage } from "./images/dashboard.png";
-export { default as tataSalt} from "./images/tata-salt.png";
-export { default as lays } from "./images/lays.png"
+export { default as tataSalt } from "./images/tata-salt.png";
+export { default as lays } from "./images/lays.png";
