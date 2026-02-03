@@ -31,7 +31,7 @@ const ImageUpload = forwardRef<HTMLInputElement, ImageUploadProp>(
           <div className="relative">
             <img
                 className="w-20 h-20 rounded-sm border border-dashed border-[#9D9D9D]"
-                src={avatarUrl ? avatarUrl : (productImage as string)}
+                src={avatarUrl ? avatarUrl : (productImage)}
             />
 
             {avatarUrl && (
