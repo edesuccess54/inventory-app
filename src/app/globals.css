@@ -164,3 +164,46 @@ h6 {
     @apply bg-background text-foreground;
   }
 }
+
+
+/* Firefox */
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 #0f172a;
+} */
+
+/* Chrome, Edge, Safari */
+/* ::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f1f3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1570ef;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1570ef;
+} */
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* IE & old Edge */
+* {
+  -ms-overflow-style: none;
+}
+
+
+

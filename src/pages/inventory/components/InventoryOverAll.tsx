@@ -4,7 +4,7 @@ const InventoryOverAll: React.FC = () => {
   return (
     <div className="rounded-lg flex-1 px-3 py-4 bg-background-white">
       <h1 className="text-text-default text-xl">Overall Inventory</h1>
-      <div className="flex gap-[30px] mt-4">
+      <div className="flex flex-col lg:flex-row gap-[30px] mt-4">
         <ItemCard
           heading="Total Products"
           color="#E19133"

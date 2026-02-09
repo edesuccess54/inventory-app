@@ -41,7 +41,7 @@ const AddProductModal = () => {
 
   return (
     <Modal modalId="add-product-modal" closeOnBackdropClick={true}>
-      <div className="bg-background-white p-6 lg:w-[523px] rounded-sm">
+      <div className="bg-background-white p-6 lg:w-[523px] mx-auto rounded-sm">
         <h2 className="text-[#383E49] text-lg font-medium">New product</h2>
         <FormProvider {...methods}>
           <form onSubmit={methods.handleSubmit(handleSubmitForm)}>
@@ -69,7 +69,7 @@ const AddProductModal = () => {
                           id="productName"
                           type="text"
                           placeholder="Product name"
-                          className="w-[315px] mb-0"
+                          className="lg:w-[315px] mb-0"
                           showError={!!errors.productName}
                           errorMessage={errors.productName?.message}
                         />

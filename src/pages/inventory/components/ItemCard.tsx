@@ -19,7 +19,7 @@ const ItemCard: React.FC<ItemCardProps> = ({
 }) => {
   return (
     <>
-      <div className="flex-1">
+      <div className="lg:flex-1">
         <h2 style={{ color }} className="font-semibold text-base">
           {heading}
         </h2>

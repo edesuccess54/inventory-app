@@ -30,12 +30,12 @@ const InventoryTable = () => {
 
   return (
     <>
-      <table className="w-full">
+      <table className="w-full responsive-table">
         <TableHead />
-        <tbody>
+        <tbody className="space-y-4 lg:space-y-0">
           {sortfilteredProduct.length === 0 ? (
             <tr>
-              <td colSpan={5} className="text-center text-text-grey font-medium text-sm py-3">
+              <td colSpan={5} className="grid place-content-center lg:table-row text-center text-text-grey font-medium text-sm py-3">
                 No product available
               </td>
             </tr>
@@ -43,7 +43,7 @@ const InventoryTable = () => {
             sortfilteredProduct?.map((product) => (
               <tr
                 key={product.id}
-                className="lg:border-b last:border-b-0 border-border-primary *:py-3 text-text-grey-700 text-sm cursor-pointer"
+                className="grid grid-cols-2 lg:table-row last:border-b-0 *:px-4 lg:*:px-6 *:py-2 lg:*:py-4 lg:py-0 border-b border-t border-l border-r lg:border-t-0 lg:border-r-0 lg:border-l-0 lg:border-b border-border-primary relative  text-text-grey-700 text-sm cursor-pointer"
                 onClick={() => handleSelectedProduct(String(product.id))}
               >
                 <TableData product={product} />
