@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/buttons";
 import { fakeProducts } from "@/mock/fakeProducts";
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import Tabs from "../components/Tabs";
 import OverViews from "./overview/OverViews";
 import Purchases from "./purchases/Purchases";

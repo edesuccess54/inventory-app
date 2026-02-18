@@ -1,6 +1,6 @@
 import { Button } from "@/components/buttons";
 import RegularInput from "@/components/inputs/RegularInput";
-import { Search, SearchCheck, SearchCheckIcon, SearchXIcon } from "lucide-react";
+import { Search} from "lucide-react";
 import React from "react";
 import PurchaseTable from "./Table/Index";
 

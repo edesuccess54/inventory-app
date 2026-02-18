@@ -54,7 +54,7 @@ const options = {
       ticks: {
         stepSize: 15000,
         //   color: "#46A46C",
-        callback: function (val: any) {
+        callback: function (val: number) {
           if (val === 0) {
             return val;
           } else {
@@ -90,8 +90,8 @@ const labels = [
 ];
 
 const RevenueChart = () => {
-  const chartRef = useRef<any>(null);
-  const [gradientColor, setGradientColor] = useState({
+  const chartRef = useRef(null);
+  const [gradientColor, _] = useState({
     start: '#0f50aa',
     end: 'rgba(196, 232, 238, 0.00)',
   });

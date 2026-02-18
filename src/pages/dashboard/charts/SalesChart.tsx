@@ -45,7 +45,7 @@ export const options = {
       ticks: {
         stepSize: 500,
         // color: "#46A46C",
-        callback: function (val) {
+        callback: function (val: any) {
           if (val === 0) {
             return val;
           } else {

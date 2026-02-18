@@ -35,7 +35,7 @@ const AddProductModal = () => {
     setValue("totalAmount", totalAmount);
   }, [purchasePrice,quantity, setValue]);
 
-  const handleSubmitForm = (values: any) => {
+  const handleSubmitForm = (values: addProductFormValues) => {
     console.log(values);
   };
 

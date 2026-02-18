@@ -1,4 +1,3 @@
-import { da } from "zod/v4/locales";
 
 export const productInitailValues = {
   productName: "",

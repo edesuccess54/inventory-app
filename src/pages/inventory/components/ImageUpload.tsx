@@ -1,6 +1,7 @@
 import { Button } from "@/components/buttons";
 import { X } from "lucide-react";
-import React, { ChangeEvent, forwardRef, useState } from "react";
+import Image from "next/image";
+import React, { ChangeEvent, forwardRef } from "react";
 import { useFormContext, useWatch } from "react-hook-form";
 
 interface ImageUploadProp {
@@ -13,7 +14,7 @@ interface ImageUploadProp {
 }
 
 const ImageUpload = forwardRef<HTMLInputElement, ImageUploadProp>(
-  ({ handleFileInputChange, handleDrop, file, removeFile, avatarUrl, ...otherProps }, ref) => {
+  ({ handleFileInputChange, handleDrop, removeFile, avatarUrl, ...otherProps }, ref) => {
     const {
       control,
       formState: { errors },
@@ -29,9 +30,12 @@ const ImageUpload = forwardRef<HTMLInputElement, ImageUploadProp>(
           className="flex justify-center items-center gap-5"
         >
           <div className="relative">
-            <img
+            <Image
                 className="w-20 h-20 rounded-sm border border-dashed border-[#9D9D9D]"
                 src={avatarUrl ? avatarUrl : (productImage)}
+                alt="product image"
+                width={20}
+                height={20}
             />
 
             {avatarUrl && (

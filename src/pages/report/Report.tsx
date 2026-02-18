@@ -2,7 +2,6 @@ import Card from "@/components/Card";
 import Link from "next/link";
 import React from "react";
 import BestSellingCategory from "./table/Index";
-import { Button } from "@/components/buttons";
 
 const DetailCard = ({ amount, name, color }: { amount: number; name: string; color: string }) => {
   return (

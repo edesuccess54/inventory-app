@@ -2,19 +2,11 @@ import Link from "next/link";
 import RevenueChart from "./charts/RevenueChart";
 import SalesChart from "./charts/SalesChart";
 import Statstics from "./Statstics";
-import TableHead from "@/components/TableHead";
 import Image from "next/image";
 import { lays, tataSalt } from "@/assets";
 import { getStatusClass, getStatusText } from "@/utils/statusLabel";
 import TopSellingProductsTable from "./table/Index";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
-import { Calendar, Calendar1, CalendarArrowUp, CalendarClock } from "lucide-react";
+
 import ChartFilter from "./components/ChartFilter";
 
 const Dashboard: React.FC = () => {
