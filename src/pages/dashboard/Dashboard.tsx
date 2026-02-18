@@ -33,7 +33,7 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
 
-        <div className="basis-[385px] bg-background-white rounded-lg shadow-md p-5">
+        <div className="basis-[600px] bg-background-white rounded-lg shadow-md p-5">
           <h2 className="text-[#383E49] text-xl font-medium mb-8">Revenue Summary</h2>
           <div className="h-[400px]">
             <RevenueChart />

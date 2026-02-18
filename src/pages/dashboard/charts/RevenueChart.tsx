@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 
 import {
   Chart as ChartJS,
@@ -11,10 +11,13 @@ import {
   Title,
   Tooltip,
   Legend,
+  Filler,
+  ChartArea,
+  ScriptableChartContext
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 
 const options = {
   responsive: true,
@@ -88,27 +91,43 @@ const labels = [
 
 const RevenueChart = () => {
   const chartRef = useRef<any>(null);
-  const [gradient, setGradient] = useState<string | CanvasGradient>("");
+  const [gradientColor, setGradientColor] = useState({
+    start: '#0f50aa',
+    end: 'rgba(196, 232, 238, 0.00)',
+  });
 
-  useEffect(() => {
-    if (!chartRef.current) return;
-    const chart = chartRef.current;
-    const ctx = chart.ctx;
-    const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-    gradient.addColorStop(0, "rgba(70, 164, 108, 0.3)"); // light green top
-    gradient.addColorStop(1, "rgba(70, 164, 108, 0)"); // transparent bottom
-    setGradient(gradient);
-  }, []);
+  const generateGradient = useCallback(
+    (ctx: CanvasRenderingContext2D, chartArea: ChartArea) => {
+      const gradient = ctx.createLinearGradient(
+        0,
+        chartArea.top,
+        0,
+        chartArea.bottom,
+      );
+      gradient.addColorStop(0, gradientColor.start);
+      gradient.addColorStop(1, gradientColor.end);
+
+      return gradient;
+    },
+    [gradientColor],
+  );
 
   const data = {
     labels,
     datasets: [
       {
         label: "Revenue",
-        data: [45000, 30000, 48000, 68000, 45000, 25000, 39000, 50000, 30000, 90000],
+        data: [45000, 30000, 48000, 68000, 45000, 25000, 39000, 50000, 30000, 90000, 10000, 25000],
         fill: true,
-        // backgroundColor: 'rgba(70, 164, 108, 0.2)',
-        backgroundColor: gradient,
+        backgroundColor: (context: ScriptableChartContext) => {
+          const chart = context.chart
+          const {ctx, chartArea} = chart
+
+          if(!ctx || !chartArea) {
+            return undefined
+          }
+          return generateGradient(ctx, chartArea)
+        },
         borderColor: "#1570ef ",
         borderWidth: 2,
         tension: 0.6,
@@ -126,22 +145,6 @@ const RevenueChart = () => {
       },
     ],
   };
-
-  // useEffect(() => {
-  //   const chart = chartRef.current;
-  //   if (!chart) return;
-
-  //   const currentMonthIndex = new Date().getMonth(); // 0-based
-
-  //   if (currentMonthIndex >= data.labels.length) return;
-
-  //   // chart.tooltip?.setActiveElements([{ datasetIndex: 0, index: currentMonthIndex }], {
-  //   //   x: 0,
-  //   //   y: 0,
-  //   // });
-
-  //   chart.update();
-  // }, []);
 
   return (
     <div className="w-full h-full">
