@@ -9,7 +9,12 @@ const TableData: React.FC<TableDataProps> = ({ product }) => {
   const { productName, productPrice, productQuantity, expiringDate, availability } = product;
   return (
     <>
-      <td>{productName}</td>
+      <td>
+        <span className="block text-xs font-medium text-text-subdued mb-1 lg:hidden">
+          Product
+        </span>
+        {productName}
+      </td>
       <td>${Number(productPrice).toLocaleString()}</td>
       <td>
         {productQuantity} {`${productQuantity > 1 ? "Cartons" : "Carton"}`}

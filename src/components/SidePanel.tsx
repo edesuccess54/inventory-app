@@ -13,7 +13,7 @@ import { logoImg } from "@/assets";
 const SidePanel: React.FC = () => {
   const isActive = usePathname();
   return (
-    <div className="w-[230px] h-screen pb-8 bg-[#fff]">
+    <div className="hidden lg:block w-[230px] h-screen pb-8 bg-[#fff]">
       <div className="flex items-center py-4 gap-3 px-6">
         <Image src={logoImg} alt="logo" width={48} />
         <p className="text-[#1570EF]">KANBAN</p>
@@ -23,7 +23,7 @@ const SidePanel: React.FC = () => {
           {menuList.map(({ title, href, icon: ICON }) => (
             <Link
               key={title}
-              className={`flex items-center gap-3 px-6 py-2 ${(isActive === href || isActive?.includes(href)) && "text-[#1570EF]"}`}
+              className={`flex items-center gap-3 px-6 py-2 ${(isActive === href || isActive?.includes(href)) ? "text-[#1570EF]" : "text-text-dark"}`}
               href={href}
             >
               <ICON /> {title}
@@ -31,7 +31,7 @@ const SidePanel: React.FC = () => {
           ))}
         </ul>
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 text-text-dark">
           <Link className="flex items-center gap-3 px-6" href="/settings">
             <GearIcon /> Settings
           </Link>

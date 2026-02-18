@@ -26,7 +26,7 @@ const Modal: React.FC<ModalProps> = ({ children, modalId, closeOnBackdropClick }
     if (typeof window !== "undefined") {
       closeModal(modalId);
     }
-  }, [route]);
+  }, [route, modalId]);
 
   if (activeModal !== modalId || !modalRef.current) return null;
 

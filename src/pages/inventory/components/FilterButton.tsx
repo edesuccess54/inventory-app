@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { FilterIcon } from "@/assets";
 import { useInventorySlice } from "@/redux/inventory/inventory.slice";
@@ -12,6 +14,7 @@ import { Check } from "lucide-react";
 
 const FilterButton = () => {
   const { filter, setUpdateFilter } = useInventorySlice();
+  // const isMobile = window.innerWidth < 768;
 
   const filterMenuItems = [
     {
@@ -51,11 +54,20 @@ const FilterButton = () => {
   };
   return (
     <DropdownMenu modal={false}>
-      <DropdownMenuTrigger className="flex items-center gap-2 cursor-pointer px-2 py-2 my-3 rounded-md border border-border-primary w-full">
-        <Image src={FilterIcon} alt="filter icon" /> Filters
+      <DropdownMenuTrigger asChild>
+        {/* {isMobile ? (
+          <div className="flex items-center">
+            <Image src={FilterIcon} alt="filter icon" />
+          </div>
+          ) : ( */}
+            <div className="flex items-center gap-2 cursor-pointer px-2 py-2 my-3 rounded-md border border-border-primary lg:w-full">
+              <Image src={FilterIcon} alt="filter icon" /> 
+              <span className="">Filter</span>
+            </div>
+          {/* )} */}
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent loop={true}>
+      <DropdownMenuContent loop={true} align="end">
         {filterMenuItems.map(({ key, textValue, text, className }) => (
           <DropdownMenuItem
             onSelect={() => handleFilter(textValue)}

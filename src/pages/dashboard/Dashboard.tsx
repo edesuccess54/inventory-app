@@ -2,19 +2,11 @@ import Link from "next/link";
 import RevenueChart from "./charts/RevenueChart";
 import SalesChart from "./charts/SalesChart";
 import Statstics from "./Statstics";
-import TableHead from "@/components/TableHead";
 import Image from "next/image";
 import { lays, tataSalt } from "@/assets";
 import { getStatusClass, getStatusText } from "@/utils/statusLabel";
 import TopSellingProductsTable from "./table/Index";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
-import { Calendar, Calendar1, CalendarArrowUp, CalendarClock } from "lucide-react";
+
 import ChartFilter from "./components/ChartFilter";
 
 const Dashboard: React.FC = () => {
@@ -33,7 +25,7 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
 
-        <div className="basis-[385px] bg-background-white rounded-lg shadow-md p-5">
+        <div className="basis-[600px] bg-background-white rounded-lg shadow-md p-5">
           <h2 className="text-[#383E49] text-xl font-medium mb-8">Revenue Summary</h2>
           <div className="h-[400px]">
             <RevenueChart />

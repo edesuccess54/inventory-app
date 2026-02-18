@@ -12,6 +12,8 @@ declare global {
     className?: string;
     disabled?: boolean;
     label?: string;
+    showError?: boolean;
+    errorMessage?: string;
     icon?: IconType;
     inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;

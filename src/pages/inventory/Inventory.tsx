@@ -14,19 +14,21 @@ const Inventory = () => {
       <InventoryOverAll />
 
       <div className="mt-[22px] rounded-lg px-3 py-1 bg-background-white">
-        <div className="flex justify-between items-center lg:mb-[22px]">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center lg:mb-[22px]">
           <h2 className="text-text-default text-xl font-medium">Products</h2>
 
-          <div className="grid grid-cols-3 gap-3">
-            <Button type="button" onClick={() => toggleModal("add-product-modal")}>
-              Add product
-            </Button>
+          <div className="flex flex-wrap lg:flex-nowrap justify-between gap-3">
+            <div>
+              <Button type="button" onClick={() => toggleModal("add-product-modal")}>Add product</Button>
+            </div>
 
-            <FilterButton />
+            <div>
+              <Button type="button" variant="outline">Download</Button>
+            </div>
 
-            <Button type="button" variant="outline">
-              Download all
-            </Button>
+            <div>
+              <FilterButton />
+            </div>
           </div>
         </div>
         <InventoryTable />

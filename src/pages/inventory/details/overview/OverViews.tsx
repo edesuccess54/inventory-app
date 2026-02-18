@@ -14,7 +14,7 @@ const renderProductDetails = (label: string, value: string) => {
   );
 };
 
-const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
+const OverViews: React.FC<ProductDetailsProps> = () => {
   return (
     <>
       <div className="flex justify-between mb-6">

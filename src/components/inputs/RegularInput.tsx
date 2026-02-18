@@ -15,6 +15,8 @@ const RegularInput = forwardRef<HTMLInputElement, RegularInputProps>(
       className,
       disabled,
       icon: Icon,
+      showError,
+      errorMessage,
       onChange,
       inputProps,
     },
@@ -66,6 +68,9 @@ const RegularInput = forwardRef<HTMLInputElement, RegularInputProps>(
             </button>
           )}
         </div>
+          {showError && errorMessage && (
+            <p className="text-sm text-red-600 mt-1">{errorMessage}</p>
+          )}
       </div>
     );
   }

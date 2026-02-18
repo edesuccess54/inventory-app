@@ -51,7 +51,7 @@ const ChartFilter = () => {
           {selected.charAt(0).toUpperCase() + selected.slice(1)}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
+      <DropdownMenuContent align="end">
         {filterOptions.map(({ label, textValue }) => (
           <DropdownMenuItem
             key={textValue}
