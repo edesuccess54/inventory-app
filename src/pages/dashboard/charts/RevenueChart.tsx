@@ -51,7 +51,7 @@ const options = {
       ticks: {
         stepSize: 15000,
         //   color: "#46A46C",
-        callback: function (val) {
+        callback: function (val: any) {
           if (val === 0) {
             return val;
           } else {
@@ -127,23 +127,27 @@ const RevenueChart = () => {
     ],
   };
 
-  useEffect(() => {
-    const chart = chartRef.current;
-    if (!chart) return;
+  // useEffect(() => {
+  //   const chart = chartRef.current;
+  //   if (!chart) return;
 
-    const currentMonthIndex = new Date().getMonth(); // 0-based
+  //   const currentMonthIndex = new Date().getMonth(); // 0-based
 
-    if (currentMonthIndex >= data.labels.length) return;
+  //   if (currentMonthIndex >= data.labels.length) return;
 
-    chart.tooltip?.setActiveElements([{ datasetIndex: 0, index: currentMonthIndex }], {
-      x: 0,
-      y: 0,
-    });
+  //   // chart.tooltip?.setActiveElements([{ datasetIndex: 0, index: currentMonthIndex }], {
+  //   //   x: 0,
+  //   //   y: 0,
+  //   // });
 
-    chart.update();
-  }, []);
+  //   chart.update();
+  // }, []);
 
-  return <Line ref={chartRef} options={options} data={data}></Line>;
+  return (
+    <div className="w-full h-full">
+      <Line ref={chartRef} options={options} data={data}></Line>
+    </div>
+  );
 };
 
 export default RevenueChart;

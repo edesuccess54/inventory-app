@@ -1,10 +1,11 @@
-import React from 'react'
-import FilterButton from './FilterButton'
-import { Button } from '@/components/buttons'
+import React from "react";
+import FilterButton from "./FilterButton";
+import { Button } from "@/components/buttons";
+import AdjustmentTable from "./table/Index";
 
 const Adjustments = () => {
   return (
-    <div className="px-5">
+    <>
       <div className="flex items-center justify-between mb-4">
         <FilterButton />
         <div>
@@ -14,11 +15,9 @@ const Adjustments = () => {
         </div>
       </div>
 
-      <div className='mt-4'>
-
-      </div>
-    </div>
+      <AdjustmentTable />
+    </>
   );
-}
+};
 
-export default Adjustments
+export default Adjustments;

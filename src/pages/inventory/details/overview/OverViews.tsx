@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 interface ProductDetailsProps {
   product: ProductProps | undefined;
@@ -9,17 +9,17 @@ const renderProductDetails = (label: string, value: string) => {
   return (
     <div className="flex justify-between w-[350px] mb-6">
       <p className="font-medium flex-1 text-text-subdued text-sm">{label}</p>
-      <p className='text-left basis-[100px] text-text-dark'>{value}</p>
+      <p className="text-left basis-[100px] text-text-dark">{value}</p>
     </div>
   );
-}
+};
 
 const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
   return (
-    <div className="px-5">
+    <>
       <div className="flex justify-between mb-6">
         <div>
-          <h1 className="text-base font-semibold text-text-highlight mb-2">Primary Details</h1>
+          <h1 className="text-base font-semibold text-text-grey-700 mb-2">Primary Details</h1>
 
           {renderProductDetails("Product name", "Maggi")}
           {renderProductDetails("Product ID", "456567")}
@@ -27,9 +27,7 @@ const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
           {renderProductDetails("Expiry Date", "13/4/23")}
           {renderProductDetails("Threshold Value", "12")}
 
-          <h1 className="text-base font-semibold text-text-highlight mt-8 mb-2">
-            Supplier Details
-          </h1>
+          <h1 className="text-base font-semibold text-text-grey-700 mt-8 mb-2">Supplier Details</h1>
 
           {renderProductDetails("Supplier name", "Ngozi Ebere")}
           {renderProductDetails("Contact Number", "08131597158")}
@@ -57,7 +55,7 @@ const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
       </div>
 
       <div className="mt-6 max-w-[689px]">
-        <h1 className="text-base font-semibold text-text-highlight mb-4">Stock Location</h1>
+        <h1 className="text-base font-semibold text-text-grey-700 mb-4">Stock Location</h1>
 
         <div>
           <table className="w-full table-auto border-collapse border-border-primary">
@@ -82,8 +80,8 @@ const OverViews: React.FC<ProductDetailsProps> = ({ product }) => {
           </table>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default OverViews
+export default OverViews;

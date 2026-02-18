@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useMemo } from "react";
 import TableHead from "./TableHead";
@@ -7,29 +7,26 @@ import { Button } from "@/components/buttons";
 import { useInventorySlice } from "@/redux/inventory/inventory.slice";
 import { useRouter } from "next/navigation";
 
-
 const InventoryTable = () => {
-  const {filter, products} = useInventorySlice();
-  const router = useRouter()
+  const { filter, products } = useInventorySlice();
+  const router = useRouter();
 
   const sortfilteredProduct = useMemo(() => {
     let filteredProducts = products;
-    if(filter !== 'all') {
-      filteredProducts = products.filter((product) => product.availability === filter)
+    if (filter !== "all") {
+      filteredProducts = products.filter((product) => product.availability === filter);
     }
 
-    filteredProducts = [...filteredProducts]
+    filteredProducts = [...filteredProducts];
 
-    return filteredProducts
+    return filteredProducts;
   }, [products, filter]);
 
   const handleSelectedProduct = (selected: string) => {
     if (selected) {
-      router.push(`/inventory/${selected}`)
+      router.push(`/inventory/${selected}`);
     }
   };
-
-
 
   return (
     <>
@@ -46,7 +43,7 @@ const InventoryTable = () => {
             sortfilteredProduct?.map((product) => (
               <tr
                 key={product.id}
-                className="lg:border-b last:border-b-0 border-border-primary *:py-3 text-text-grey font-medium text-sm cursor-pointer"
+                className="lg:border-b last:border-b-0 border-border-primary *:py-3 text-text-grey-700 text-sm cursor-pointer"
                 onClick={() => handleSelectedProduct(String(product.id))}
               >
                 <TableData product={product} />

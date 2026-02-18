@@ -1,8 +1,22 @@
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
-import { ChevronDown, Filter, FilterIcon } from 'lucide-react'
-import React from 'react'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { capitaliseText } from "@/utils/capitaliseText";
+import { ChevronDown, FilterIcon } from "lucide-react";
+import React from "react";
 
 const FilterButton = () => {
+  const [selectedFilter, setSelectedFilter] = React.useState<string>("all");
+
+  const handleFilterSelect = (filter: string) => {
+    setSelectedFilter(filter);
+  };
+
+  const filters = ["all", "deduction", "addition"];
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -13,16 +27,18 @@ const FilterButton = () => {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent loop={true}>
-        <DropdownMenuItem onSelect={() => console.log("Filter by All")}>All</DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => console.log("Filter by In-stock")}>
-          Deduction
-        </DropdownMenuItem>
-        <DropdownMenuItem onSelect={() => console.log("Filter by Out-of-stock")}>
-          Addition
-        </DropdownMenuItem>
+        {filters.map((filter) => (
+          <DropdownMenuItem
+            key={filter}
+            onSelect={() => handleFilterSelect(filter)}
+            className={selectedFilter === filter ? "bg-[#e1e1e1]" : ""}
+          >
+            {capitaliseText(filter)}
+          </DropdownMenuItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );
-}
+};
 
-export default FilterButton
+export default FilterButton;

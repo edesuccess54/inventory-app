@@ -25,7 +25,7 @@ const Statstics = () => {
           </div>
         </OverViewCard>
 
-        <div className="basis-[380px]">
+        <div className="basis-[385px]">
           <OverViewCard heading="Inventory Summary">
             <div className="mt-[22px] flex gap-5">
               <ItemCard title="Quantity" total={1000} icon={SalesIcon} color="#E8F1FD" />
@@ -51,7 +51,7 @@ const Statstics = () => {
           </div>
         </OverViewCard>
 
-        <div className="basis-[380px]">
+        <div className="basis-[385px]">
           <OverViewCard heading="Product Summary">
             <div className="mt-[22px] flex gap-5">
               <ItemCard title="Suppliers" total={200} icon={SuppliersIcon} color="#E8F1FD" />

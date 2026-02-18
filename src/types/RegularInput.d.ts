@@ -13,6 +13,7 @@ declare global {
     disabled?: boolean;
     label?: string;
     icon?: IconType;
+    inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   }
 }
