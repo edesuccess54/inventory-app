@@ -7,12 +7,9 @@ import {
   TrendingUp,
   ShoppingCart,
   Users,
-  Zap,
   Shield,
   ArrowRight,
   Check,
-  Menu,
-  X,
   Mail,
   Phone,
   MapPin,
@@ -25,7 +22,6 @@ import { dashboardImage } from "@/assets";
 
 export default function InventoryLanding() {
   const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
 
   useEffect(() => {

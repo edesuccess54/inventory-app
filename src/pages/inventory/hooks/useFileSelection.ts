@@ -74,7 +74,7 @@ const useFileSelection = ({
   };
 
   return {
-    inputRef,
+    inputRef, 
     avatarUrl,
     file,
     removeFile,

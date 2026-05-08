@@ -11,7 +11,7 @@ const BestSellingCategory = () => {
           {bestSellingCatgories.map((product) => (
             <tr
               key={product.id}
-              className="lg:border-b last:border-b-0 border-border-primary *:py-3 text-text-grey font-medium text-sm"
+              className="lg:border-b last:border-b-0 border-border-primary *:py-3 text-[#5D6679] font-medium text-sm"
             >
               <TableData product={product} />
             </tr>
