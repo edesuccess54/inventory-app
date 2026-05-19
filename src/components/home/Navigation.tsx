@@ -1,6 +1,9 @@
 import { Menu, Package, X } from "lucide-react";
 import React, { useState } from "react";
 
+import {SignUpButton} from '@clerk/nextjs'
+import Link from "next/link";
+
 interface NavigationProps {
   scrolled: boolean;
 }
@@ -40,18 +43,20 @@ const Navigation: React.FC<NavigationProps> = ({ scrolled }) => {
 
           <div className="hidden md:flex items-center space-x-8">
             {menus.map(({ link, label }) => (
-              <a
+              <Link
                 key={label}
                 href={link}
                 className="text-gray-600 hover:text-blue-600 transition-colors relative group"
               >
                 {label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-              </a>
+              </Link>
             ))}
-            <button className="px-5 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all transform hover:scale-105">
-              Get Started
-            </button>
+            <SignUpButton>
+              <button className="px-5 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all transform hover:scale-105">
+                Get Started
+              </button>
+            </SignUpButton>
           </div>
 
           <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -64,17 +69,19 @@ const Navigation: React.FC<NavigationProps> = ({ scrolled }) => {
         <div className="md:hidden bg-white/95 backdrop-blur-lg border-t animate-slideInUp">
           <div className="px-4 py-4 space-y-3">
             {menus.map(({ label, link }) => (
-              <a
+              <Link
                 key={label}
                 href={link}
                 className="block text-gray-600 hover:text-blue-600 transition-colors"
               >
                 {label}
-              </a>
+              </Link>
             ))}
-            <button className="w-full px-5 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg transition-all">
-              Get Started
-            </button>
+            <SignUpButton>
+              <button className="w-full px-5 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg transition-all">
+                Get Started
+              </button>
+            </SignUpButton>
           </div>
         </div>
       )}

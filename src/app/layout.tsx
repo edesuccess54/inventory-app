@@ -2,6 +2,8 @@
 
 import "./globals.css";
 import Providers from "./Providers";
+import { ClerkProvider, Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
+
 
 import { Inter } from "next/font/google";
 
@@ -16,11 +18,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
-      <body>
-        <Providers>{children}</Providers>
-        <div id="modal-id"></div>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className={inter.className}>
+        <body>
+          <Providers>{children}</Providers>
+          <div id="modal-id"></div>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
